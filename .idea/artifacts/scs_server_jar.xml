@@ -3,7 +3,10 @@
     <output-path>$PROJECT_DIR$/out/artifacts/scs_server_jar</output-path>
     <root id="archive" name="scs-server.jar">
       <element id="module-output" name="scs-server" />
-      <element id="dir-copy" path="$PROJECT_DIR$/lib" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/connection.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/managementprotocol.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/protocol.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
