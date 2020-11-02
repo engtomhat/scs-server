@@ -22,22 +22,37 @@ public class SCSServer {
     String scsHost;
     Integer scsPort;
     Integer solutionID;
+    String action;
 
     MessageHandler scsMessageHandler;
 
     SCSServer(String scsApplicationName, Integer scsApplicationDBid, String userName,
-              String scsHost, Integer scsPort, Integer solutionID) {
+              String scsHost, Integer scsPort, Integer solutionID, String action) {
         this.scsApplicationName = scsApplicationName;
         this.scsApplicationDBid = scsApplicationDBid;
         this.userName = userName;
         this.scsHost = scsHost;
         this.scsPort = scsPort;
         this.solutionID = solutionID;
+        this.action = action.toLowerCase();
     }
 
     private void go() {
         connect();
-        restartSolution();
+        switch (action) {
+            case "stop":
+                stopSolution();
+                break;
+            case "start":
+                startSolution();
+                break;
+            case "restart":
+                restartSolution();
+                break;
+            default:
+                out(String.format("Unsupported action (%s)", action));
+                break;
+        }
     }
 
     private void connect() {
@@ -112,14 +127,14 @@ public class SCSServer {
     }
 
     public static void main(String[] args) {
-        if (args.length < 6) {
-            out("java -jar scs-server.jar app-name app-db-id username scs-host scs-port solution-id");
+        if (args.length < 7) {
+            out("java -jar scs-server.jar app-name app-db-id username scs-host scs-port solution-id action");
             System.exit(1);
         }
 
         SCSServer scsServer = new SCSServer(
                 args[0], Integer.valueOf(args[1]), args[2],
-                args[3], Integer.valueOf(args[4]), Integer.valueOf(args[5]));
+                args[3], Integer.valueOf(args[4]), Integer.valueOf(args[5]), args[6]);
         scsServer.go();
         out("done");
     }
