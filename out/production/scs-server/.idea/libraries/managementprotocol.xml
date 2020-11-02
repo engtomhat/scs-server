@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="managementprotocol">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/managementprotocol.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

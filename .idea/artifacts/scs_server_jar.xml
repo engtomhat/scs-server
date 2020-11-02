@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="scs-server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/scs_server_jar</output-path>
+    <root id="archive" name="scs-server.jar">
+      <element id="module-output" name="scs-server" />
+      <element id="dir-copy" path="$PROJECT_DIR$/lib" />
+    </root>
+  </artifact>
+</component>
