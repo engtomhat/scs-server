@@ -12,5 +12,7 @@
     <orderEntry type="library" name="connection" level="project" />
     <orderEntry type="library" name="managementprotocol" level="project" />
     <orderEntry type="library" name="protocol" level="project" />
+    <orderEntry type="library" name="netty-all-4.1.51.Final" level="project" />
+    <orderEntry type="library" name="kvlists" level="project" />
   </component>
 </module>

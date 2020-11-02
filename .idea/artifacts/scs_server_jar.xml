@@ -7,6 +7,8 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/connection.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/managementprotocol.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/protocol.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/netty-all-4.1.51.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kvlists.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
